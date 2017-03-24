@@ -7,7 +7,7 @@ title: Simon's Blog
 subtitle:
 description:
 author: Simon Zhang
-language: zh-CN
+language: zh-hans
 timezone:
 
 # URL
@@ -26,6 +26,8 @@ category_dir: categories
 code_dir: downloads/code
 i18n_dir: :lang
 skip_render:
+  - 'README.md'
+  - 'LICENSE'
 
 # Writing
 new_post_name: :title.md # File name of new posts
@@ -36,6 +38,7 @@ filename_case: 0
 render_drafts: false
 post_asset_folder: false
 relative_link: false
+use_font_lato: false #不从Google加载字体，默认加载本地字体
 future: true
 highlight:
   enable: true
@@ -63,11 +66,13 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: landscape
+theme: next
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repository: http://github.com/SimonZhangITer/SimonZhangITer.github.io.git
   branch: master
+  repo:
+    github: http://github.com/SimonZhangITer/SimonZhangITer.github.io.git
+    coding: git@git.coding.net:Simon_ITer/simon_iter.git
