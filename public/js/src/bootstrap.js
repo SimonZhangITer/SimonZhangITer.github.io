@@ -8,8 +8,6 @@ $(document).ready(function () {
 
   NexT.utils.lazyLoadPostsImages();
 
-  NexT.utils.registerESCKeyEvent();
-
   NexT.utils.registerBackToTop();
 
   $('.site-nav-toggle button').on('click', function () {
@@ -19,7 +17,7 @@ $(document).ready(function () {
     var animateAction = isSiteNavOn ? 'slideUp' : 'slideDown';
     var animateCallback = isSiteNavOn ? 'removeClass' : 'addClass';
 
-    $siteNav.stop()[animateAction]('fast', function () {
+    $siteNav.stop()[animateAction]('normal', function () {
       $siteNav[animateCallback](ON_CLASS_NAME);
     });
   });

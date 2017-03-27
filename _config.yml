@@ -4,10 +4,10 @@
 
 # Site
 title: Simon's Blog
-subtitle:
-description:
+subtitle: My Own Best Enemy
+description: 
 author: Simon Zhang
-language: zh-hans
+language: en
 timezone:
 
 # URL
@@ -66,7 +66,7 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: next
+theme: nextd
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
