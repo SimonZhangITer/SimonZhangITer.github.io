@@ -42,7 +42,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="vue,vue-router,vuex,echarts,es6,axios,webpack," />
+  <meta name="keywords" content="ES6,vue,vue-router,vuex,echarts,axios,webpack," />
 
 
 
@@ -53,7 +53,7 @@
 
 
 
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+  <link rel="shortcut icon" type="image/x-icon" href="/static/avatar.ico?v=5.0.1" />
 
 
 
@@ -73,8 +73,8 @@ webpack、ES6、Babel、Stylus…
 
 GitHub">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Vue2+Echarts实现多种图表数据可视化Dashboard详解">
-<meta property="og:url" content="https://simonzhangiter.github.io/2017/02/14/Vue2+Echarts实现多种图表数据可视化Dashboard详解（附源码）/index.html">
+<meta property="og:title" content="Vue2+Echarts实现多种图表数据可视化">
+<meta property="og:url" content="https://simonzhangiter.github.io/2017/02/14/echartsDashboard/index.html">
 <meta property="og:site_name" content="Simon's Blog">
 <meta property="og:description" content="将数据通过图表的形式展现出来将大大的提升可读性和阅读效率
 本例包含柱状图、折线图、散点图、热力图、复杂柱状图、预览面板等
@@ -89,9 +89,9 @@ webpack、ES6、Babel、Stylus…
 
 GitHub">
 <meta property="og:image" content="https://static.oschina.net/uploads/space/2017/0214/162200_cHAf_2493500.png">
-<meta property="og:updated_time" content="2017-04-07T08:40:48.000Z">
+<meta property="og:updated_time" content="2017-04-08T08:57:14.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Vue2+Echarts实现多种图表数据可视化Dashboard详解">
+<meta name="twitter:title" content="Vue2+Echarts实现多种图表数据可视化">
 <meta name="twitter:description" content="将数据通过图表的形式展现出来将大大的提升可读性和阅读效率
 本例包含柱状图、折线图、散点图、热力图、复杂柱状图、预览面板等
 
@@ -125,9 +125,9 @@ GitHub">
 
 
 
-  <link rel="canonical" href="https://simonzhangiter.github.io/2017/02/14/Vue2+Echarts实现多种图表数据可视化Dashboard详解（附源码）/"/>
+  <link rel="canonical" href="https://simonzhangiter.github.io/2017/02/14/echartsDashboard/"/>
 
-  <title> Vue2+Echarts实现多种图表数据可视化Dashboard详解 | Simon's Blog </title>
+  <title> Vue2+Echarts实现多种图表数据可视化 | Simon's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
@@ -135,6 +135,16 @@ GitHub">
   
 
 
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?783f73f854f798750b155f5d337d5e91";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
 
 
 
@@ -151,7 +161,7 @@ GitHub">
   <div class="container one-collumn sidebar-position-right page-post-detail ">
     <div class="headband"></div>
     
-    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader" style="background-image: url('http://pic.97uimg.com/back_pic/20/15/11/03/fa374aea42cebf1ecdfdff1106da11c6.jpg!w1200');">
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader" style="background-image: url('http://bpic.588ku.com/back_pic/00/01/54/555604115c64ab3.jpg!/fh/300/quality/90/unsharp/true/compress/true');">
       <div class="header-inner"><a class="site-home" href="/">Simon's Blog</a>
 
 <div class="site-meta ">
@@ -234,6 +244,8 @@ GitHub">
   <div class="post-header">
       <div class="tags">
       
+        <a href="/tags/ES6/" rel="tag" title="ES6">ES6</a>
+      
         <a href="/tags/vue/" rel="tag" title="vue">vue</a>
       
         <a href="/tags/vue-router/" rel="tag" title="vue-router">vue-router</a>
@@ -242,14 +254,12 @@ GitHub">
       
         <a href="/tags/echarts/" rel="tag" title="echarts">echarts</a>
       
-        <a href="/tags/es6/" rel="tag" title="es6">es6</a>
-      
         <a href="/tags/axios/" rel="tag" title="axios">axios</a>
       
         <a href="/tags/webpack/" rel="tag" title="webpack">webpack</a>
       
       </div>
-      <h1>Vue2+Echarts实现多种图表数据可视化Dashboard详解</h1>
+      <h1>Vue2+Echarts实现多种图表数据可视化</h1>
       <h2 class="subtitle"></h2>
       <div class="post-time">
         <span class="post-meta-item-text">Posted on </span>
@@ -289,7 +299,7 @@ GitHub">
             
             
               
-                Vue2+Echarts实现多种图表数据可视化Dashboard详解
+                Vue2+Echarts实现多种图表数据可视化
               
             
           </h1>
@@ -449,6 +459,8 @@ GitHub">
       
         <div class="post-tags">
           
+            <a href="/tags/ES6/" rel="tag">#ES6</a>
+          
             <a href="/tags/vue/" rel="tag">#vue</a>
           
             <a href="/tags/vue-router/" rel="tag">#vue-router</a>
@@ -456,8 +468,6 @@ GitHub">
             <a href="/tags/vuex/" rel="tag">#vuex</a>
           
             <a href="/tags/echarts/" rel="tag">#echarts</a>
-          
-            <a href="/tags/es6/" rel="tag">#es6</a>
           
             <a href="/tags/axios/" rel="tag">#axios</a>
           
@@ -470,12 +480,16 @@ GitHub">
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2016/09/12/ES6语句或语句块中的闭包问题详解/" rel="next" title="ES6语句或语句块中的闭包问题详解">
+                <i class="fa fa-chevron-left"></i> ES6语句或语句块中的闭包问题详解
+              </a>
+            
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/03/24/hello-world/" rel="prev" title="Hello World">
-                Hello World <i class="fa fa-chevron-right"></i>
+              <a href="/2017/03/24/eleme/" rel="prev" title="vue2构建高仿饿了么平台以及遇到的坑">
+                vue2构建高仿饿了么平台以及遇到的坑 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -569,7 +583,7 @@ GitHub">
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">2</span>
+              <span class="site-state-item-count">4</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>
@@ -577,7 +591,7 @@ GitHub">
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-count">3</span>
                 <span class="site-state-item-name">categories</span>
               </a>
             </div>
@@ -586,7 +600,7 @@ GitHub">
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-count">8</span>
                 <span class="site-state-item-name">tags</span>
               </a>
             </div>
@@ -698,8 +712,8 @@ GitHub">
 
 <div class="theme-info">
   Theme -
-  <a class="theme-link" href="https://github.com/HiDino9/hexo-theme-nextd">
-    NexTD
+  <a class="theme-link" href="https://github.com/SimonZhangITer/hexo-theme-NextZ">
+    NextZ
   </a>
 </div>
 
@@ -848,9 +862,6 @@ GitHub">
   
 
   
-<script type="text/javascript" async src="//push.zhanzhang.baidu.com/push.js">
-</script>
-
 
 </body>
 </html>

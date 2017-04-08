@@ -294,8 +294,6 @@ blockquote {
   padding: 0;
 }
 img {
-  display: block;
-  margin: auto;
   max-width: 100%;
   height: auto;
 }
@@ -714,9 +712,6 @@ pre .javascript .function {
   margin-top: 10px;
   width: auto !important;
 }
-.page-post-detail .post-body .group-picture-column img {
-  margin: 0 auto;
-}
 .page-archive .group-picture-container {
   overflow: hidden;
 }
@@ -1129,8 +1124,6 @@ pre .javascript .function {
   }
 }
 .post-body .fancybox img {
-  display: block !important;
-  margin: 0 auto;
   cursor: pointer;
   cursor: zoom-in;
   cursor: -webkit-zoom-in;
@@ -1208,9 +1201,6 @@ pre .javascript .function {
   box-sizing: border-box;
   margin: auto;
   padding: 3px;
-}
-.posts-expand .fancybox img {
-  margin: 0 auto;
 }
 @media (max-width: 767px) {
   .posts-collapse {
@@ -1843,7 +1833,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #9418ff;
+  background: #52daff;
 }
 .links-of-blogroll {
   font-size: 13px;

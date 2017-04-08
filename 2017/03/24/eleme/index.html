@@ -42,7 +42,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="ES6,vue,vue-router,vuex,axios,webpack," />
 
 
 
@@ -53,7 +53,7 @@
 
 
 
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+  <link rel="shortcut icon" type="image/x-icon" href="/static/avatar.ico?v=5.0.1" />
 
 
 
@@ -65,32 +65,38 @@
 饿了么点餐系统
 vue2.0、vuex、vue-router、axios、webpack、eslint、better-scroll
 
-部分细节还在开发中，感兴趣的可以加入进来，觉得不错的给个star
-GitHub地址：https://gith">
+演示在线演示戳我（请使用chrome开发者手机演示模式预览）
+移动端演示扫二维码在手机上查看效果更好
+
+组件">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="https://simonzhangiter.github.io/2017/03/24/hello-world/index.html">
+<meta property="og:title" content="vue2构建高仿饿了么平台以及遇到的坑">
+<meta property="og:url" content="https://simonzhangiter.github.io/2017/03/24/eleme/index.html">
 <meta property="og:site_name" content="Simon's Blog">
 <meta property="og:description" content="一直对vue很感兴趣，最近使用vue2.0开发了高仿饿了么点餐系统来练练手，不得不说vue真是一个很不错的框架，但是也遇到过一些坑，在这里和大家分享一下
 
 饿了么点餐系统
 vue2.0、vuex、vue-router、axios、webpack、eslint、better-scroll
 
-部分细节还在开发中，感兴趣的可以加入进来，觉得不错的给个star
-GitHub地址：https://gith">
+演示在线演示戳我（请使用chrome开发者手机演示模式预览）
+移动端演示扫二维码在手机上查看效果更好
+
+组件">
 <meta property="og:image" content="https://static.oschina.net/uploads/space/2017/0207/180535_4FSI_2493500.png">
 <meta property="og:image" content="https://static.oschina.net/uploads/space/2017/0207/110250_3uWi_2493500.jpeg">
-<meta property="og:image" content="https://static.oschina.net/uploads/space/2017/0207/110759_xva1_2493500.jpeg">
-<meta property="og:updated_time" content="2017-03-24T06:21:05.000Z">
+<meta property="og:image" content="https://cloud.githubusercontent.com/assets/20501873/24188896/ff2c5910-0f1d-11e7-80c0-bc28fd84fe80.png">
+<meta property="og:updated_time" content="2017-04-08T08:57:14.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
+<meta name="twitter:title" content="vue2构建高仿饿了么平台以及遇到的坑">
 <meta name="twitter:description" content="一直对vue很感兴趣，最近使用vue2.0开发了高仿饿了么点餐系统来练练手，不得不说vue真是一个很不错的框架，但是也遇到过一些坑，在这里和大家分享一下
 
 饿了么点餐系统
 vue2.0、vuex、vue-router、axios、webpack、eslint、better-scroll
 
-部分细节还在开发中，感兴趣的可以加入进来，觉得不错的给个star
-GitHub地址：https://gith">
+演示在线演示戳我（请使用chrome开发者手机演示模式预览）
+移动端演示扫二维码在手机上查看效果更好
+
+组件">
 <meta name="twitter:image" content="https://static.oschina.net/uploads/space/2017/0207/180535_4FSI_2493500.png">
 
 
@@ -112,9 +118,9 @@ GitHub地址：https://gith">
 
 
 
-  <link rel="canonical" href="https://simonzhangiter.github.io/2017/03/24/hello-world/"/>
+  <link rel="canonical" href="https://simonzhangiter.github.io/2017/03/24/eleme/"/>
 
-  <title> Hello World | Simon's Blog </title>
+  <title> vue2构建高仿饿了么平台以及遇到的坑 | Simon's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
@@ -122,6 +128,16 @@ GitHub地址：https://gith">
   
 
 
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?783f73f854f798750b155f5d337d5e91";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
 
 
 
@@ -138,7 +154,7 @@ GitHub地址：https://gith">
   <div class="container one-collumn sidebar-position-right page-post-detail ">
     <div class="headband"></div>
     
-    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader" style="background-image: url('http://pic.97uimg.com/back_pic/00/04/20/33/c48a7214023a88f63c778e338f8f6faa.jpg!w1200');">
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader" style="background-image: url('http://bpic.588ku.com/back_pic/03/70/33/0457b65f789abb3.jpg');">
       <div class="header-inner"><a class="site-home" href="/">Simon's Blog</a>
 
 <div class="site-meta ">
@@ -221,8 +237,20 @@ GitHub地址：https://gith">
   <div class="post-header">
       <div class="tags">
       
+        <a href="/tags/ES6/" rel="tag" title="ES6">ES6</a>
+      
+        <a href="/tags/vue/" rel="tag" title="vue">vue</a>
+      
+        <a href="/tags/vue-router/" rel="tag" title="vue-router">vue-router</a>
+      
+        <a href="/tags/vuex/" rel="tag" title="vuex">vuex</a>
+      
+        <a href="/tags/axios/" rel="tag" title="axios">axios</a>
+      
+        <a href="/tags/webpack/" rel="tag" title="webpack">webpack</a>
+      
       </div>
-      <h1>Hello World</h1>
+      <h1>vue2构建高仿饿了么平台以及遇到的坑</h1>
       <h2 class="subtitle"></h2>
       <div class="post-time">
         <span class="post-meta-item-text">Posted on </span>
@@ -262,7 +290,7 @@ GitHub地址：https://gith">
             
             
               
-                Hello World
+                vue2构建高仿饿了么平台以及遇到的坑
               
             
           </h1>
@@ -279,6 +307,25 @@ GitHub地址：https://gith">
             </time>
           </span>
 
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/vue/" itemprop="url" rel="index">
+                    <span itemprop="name">vue</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
           
 
           <!-- 
@@ -308,16 +355,24 @@ GitHub地址：https://gith">
 <h1 id="饿了么点餐系统"><a href="#饿了么点餐系统" class="headerlink" title="饿了么点餐系统"></a>饿了么点餐系统</h1><blockquote>
 <p>vue2.0、vuex、vue-router、axios、webpack、eslint、better-scroll</p>
 </blockquote>
-<p>部分细节还在开发中，感兴趣的可以加入进来，觉得不错的给个star</p>
-<p>GitHub地址：<a href="https://github.com/SimonZhangITer/VueDemo_Sell_Eleme" target="_blank" rel="external">https://github.com/SimonZhangITer/VueDemo_Sell_Eleme</a></p>
-<h2 id="演示"><a href="#演示" class="headerlink" title="演示"></a>演示</h2><div align="center"><a href="http://vuejssellapp.t.imooc.io/" target="_blank">在线演示戳我</a></div>
-
-<div align="center"><br><img src="https://static.oschina.net/uploads/space/2017/0207/180535_4FSI_2493500.png" width="20%"><br><div>扫二维码在手机上查看效果更好</div><br></div>
-
-<h2 id="项目截图"><a href="#项目截图" class="headerlink" title="项目截图"></a>项目截图</h2><div align="center"><img src="https://static.oschina.net/uploads/space/2017/0207/110250_3uWi_2493500.jpeg" width="40%"></div>
-
-<div align="center"><img src="https://static.oschina.net/uploads/space/2017/0207/110759_xva1_2493500.jpeg" width="40%"></div>
-
+<h2 id="演示"><a href="#演示" class="headerlink" title="演示"></a>演示</h2><p><a href="https://simonzhangiter.github.io/VueDemo_Sell_Eleme" target="_blank">在线演示戳我</a>（请使用chrome开发者手机演示模式预览）</p>
+<h3 id="移动端演示"><a href="#移动端演示" class="headerlink" title="移动端演示"></a>移动端演示</h3><p>扫二维码在手机上查看效果更好</p>
+<p><img src="https://static.oschina.net/uploads/space/2017/0207/180535_4FSI_2493500.png" width="25%"></p>
+<h2 id="组件"><a href="#组件" class="headerlink" title="组件"></a>组件</h2><ul>
+<li>购物车</li>
+<li>购买物品小球飞入动画</li>
+<li>评价star组件</li>
+<li>商品添加、删除组件</li>
+<li>优惠图标组件</li>
+<li>目录、列表联动滚动</li>
+<li>画廊</li>
+<li>评论的是否满意和内容筛选</li>
+<li>商品列表页面</li>
+<li>店铺评价页面</li>
+<li>商家介绍页面</li>
+<li>优惠活动页面</li>
+<li>商品详情页面</li>
+</ul>
 <h2 id="构建"><a href="#构建" class="headerlink" title="构建"></a>构建</h2><p>vue有自己的脚手架构建工具vue-cli,使用起来非常方便，使用webpack来集成各种开发便捷工具，比如：</p>
 <ul>
 <li>代码热更新，修改代码之后网页无刷新改变，对前端开发来说非常的方便</li>
@@ -348,7 +403,15 @@ GitHub地址：https://gith">
 <p>那么test组件中就需要监听，在created方法里写</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</div><div class="line">  created()&#123;</div><div class="line">   Vue.$on(<span class="string">'add'</span>,<span class="keyword">this</span>.add)</div><div class="line">  &#125;,</div><div class="line">  <span class="attr">method</span>:&#123;</div><div class="line">  	add()&#123;</div><div class="line">  	  <span class="keyword">this</span>.count++</div><div class="line">  	&#125;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>除了以上总结的这点小的知识点以外，还有很多vue的知识想要和大家分享，以后会陆续写出来，大家感兴趣的也可以来我的GitHub一起来写这个项目（觉得不错的给个star Hah）</p>
-<p>GitHub地址：<a href="https://github.com/SimonZhangITer/VueDemo_Sell_Eleme" target="_blank" rel="external">https://github.com/SimonZhangITer/VueDemo_Sell_Eleme</a></p>
+<h2 id="安装步骤"><a href="#安装步骤" class="headerlink" title="安装步骤"></a>安装步骤</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># install dependencies</span></div><div class="line">npm install</div><div class="line"></div><div class="line"><span class="comment"># serve with hot reload at localhost:8080</span></div><div class="line">npm run dev</div><div class="line"></div><div class="line"><span class="comment"># build for production with minification</span></div><div class="line">npm run build</div></pre></td></tr></table></figure>
+<h2 id="项目截图"><a href="#项目截图" class="headerlink" title="项目截图"></a>项目截图</h2><p><img src="https://static.oschina.net/uploads/space/2017/0207/110250_3uWi_2493500.jpeg" width="40%">&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://cloud.githubusercontent.com/assets/20501873/24188896/ff2c5910-0f1d-11e7-80c0-bc28fd84fe80.png" width="40%"></p>
+<h2 id="交流"><a href="#交流" class="headerlink" title="交流"></a>交流</h2><p>欢迎热爱学习、忠于分享的胖友一起来交流</p>
+<ul>
+<li><p>QQ：745913574</p>
+</li>
+<li><p>QQ群：149683643</p>
+</li>
+</ul>
 
         所有文章非特别说明皆为原创。技术更迭迅猛，部分内容可能会作修改，为保证信息与源同步，转载时请务必注明文章出处！谢谢合作 :-)
       
@@ -391,13 +454,29 @@ GitHub地址：https://gith">
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/ES6/" rel="tag">#ES6</a>
+          
+            <a href="/tags/vue/" rel="tag">#vue</a>
+          
+            <a href="/tags/vue-router/" rel="tag">#vue-router</a>
+          
+            <a href="/tags/vuex/" rel="tag">#vuex</a>
+          
+            <a href="/tags/axios/" rel="tag">#axios</a>
+          
+            <a href="/tags/webpack/" rel="tag">#webpack</a>
+          
+        </div>
+      
 
       
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/02/14/Vue2+Echarts实现多种图表数据可视化Dashboard详解（附源码）/" rel="next" title="Vue2+Echarts实现多种图表数据可视化Dashboard详解">
-                <i class="fa fa-chevron-left"></i> Vue2+Echarts实现多种图表数据可视化Dashboard详解
+              <a href="/2017/02/14/echartsDashboard/" rel="next" title="Vue2+Echarts实现多种图表数据可视化">
+                <i class="fa fa-chevron-left"></i> Vue2+Echarts实现多种图表数据可视化
               </a>
             
           </div>
@@ -495,7 +574,7 @@ GitHub地址：https://gith">
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">2</span>
+              <span class="site-state-item-count">4</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>
@@ -503,7 +582,7 @@ GitHub地址：https://gith">
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-count">3</span>
                 <span class="site-state-item-name">categories</span>
               </a>
             </div>
@@ -512,7 +591,7 @@ GitHub地址：https://gith">
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-count">8</span>
                 <span class="site-state-item-name">tags</span>
               </a>
             </div>
@@ -592,7 +671,7 @@ GitHub地址：https://gith">
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#饿了么点餐系统"><span class="nav-number">1.</span> <span class="nav-text">饿了么点餐系统</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#演示"><span class="nav-number">1.1.</span> <span class="nav-text">演示</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#项目截图"><span class="nav-number">1.2.</span> <span class="nav-text">项目截图</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#构建"><span class="nav-number">1.3.</span> <span class="nav-text">构建</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#开发"><span class="nav-number">1.4.</span> <span class="nav-text">开发</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Axios"><span class="nav-number">1.4.1.</span> <span class="nav-text">Axios</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Vuex"><span class="nav-number">1.4.2.</span> <span class="nav-text">Vuex</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Vue-Router"><span class="nav-number">1.4.3.</span> <span class="nav-text">Vue-Router</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#获取元素节点"><span class="nav-number">1.4.4.</span> <span class="nav-text">获取元素节点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#组件间的通信"><span class="nav-number">1.4.5.</span> <span class="nav-text">组件间的通信</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#饿了么点餐系统"><span class="nav-number">1.</span> <span class="nav-text">饿了么点餐系统</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#演示"><span class="nav-number">1.1.</span> <span class="nav-text">演示</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#移动端演示"><span class="nav-number">1.1.1.</span> <span class="nav-text">移动端演示</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#组件"><span class="nav-number">1.2.</span> <span class="nav-text">组件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#构建"><span class="nav-number">1.3.</span> <span class="nav-text">构建</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#开发"><span class="nav-number">1.4.</span> <span class="nav-text">开发</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Axios"><span class="nav-number">1.4.1.</span> <span class="nav-text">Axios</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Vuex"><span class="nav-number">1.4.2.</span> <span class="nav-text">Vuex</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Vue-Router"><span class="nav-number">1.4.3.</span> <span class="nav-text">Vue-Router</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#获取元素节点"><span class="nav-number">1.4.4.</span> <span class="nav-text">获取元素节点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#组件间的通信"><span class="nav-number">1.4.5.</span> <span class="nav-text">组件间的通信</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装步骤"><span class="nav-number">1.5.</span> <span class="nav-text">安装步骤</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#项目截图"><span class="nav-number">1.6.</span> <span class="nav-text">项目截图</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#交流"><span class="nav-number">1.7.</span> <span class="nav-text">交流</span></a></li></ol></li></ol></div>
             
           </div>
         </section>
@@ -624,8 +703,8 @@ GitHub地址：https://gith">
 
 <div class="theme-info">
   Theme -
-  <a class="theme-link" href="https://github.com/HiDino9/hexo-theme-nextd">
-    NexTD
+  <a class="theme-link" href="https://github.com/SimonZhangITer/hexo-theme-NextZ">
+    NextZ
   </a>
 </div>
 
@@ -774,9 +853,6 @@ GitHub地址：https://gith">
   
 
   
-<script type="text/javascript" async src="//push.zhanzhang.baidu.com/push.js">
-</script>
-
 
 </body>
 </html>
