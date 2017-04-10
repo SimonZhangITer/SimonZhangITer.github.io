@@ -413,7 +413,7 @@ vue2.0、vuex、vue-router、axios、webpack、eslint、better-scroll
 </li>
 </ul>
 
-        所有文章非特别说明皆为原创。技术更迭迅猛，部分内容可能会作修改，为保证信息与源同步，转载时请务必注明文章出处！谢谢合作 :-)
+        所有文章非特别说明皆为原创。部分内容可能会作修改，为保证信息与源同步，转载时请务必注明文章出处！谢谢合作 :-)
       
     </div>
 
@@ -428,7 +428,7 @@ vue2.0、vuex、vue-router、axios、webpack、eslint、better-scroll
       
         
   <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
-    <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
+    <div>if you think this article helpful, you can buy me a cup of coffee</div>
     <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
       <span>赏</span>
     </button>
@@ -482,6 +482,10 @@ vue2.0、vuex、vue-router、axios、webpack、eslint、better-scroll
           </div>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/04/10/test/" rel="prev" title="test">
+                test <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -574,7 +578,7 @@ vue2.0、vuex、vue-router、axios、webpack、eslint、better-scroll
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">4</span>
+              <span class="site-state-item-count">5</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>
@@ -707,6 +711,14 @@ vue2.0、vuex、vue-router、axios、webpack、eslint、better-scroll
     NextZ
   </a>
 </div>
+<script>
+(function(){
+    var bp = document.createElement('script');
+    bp.src = '//push.zhanzhang.baidu.com/push.js';
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
 
         
 
@@ -839,13 +851,6 @@ vue2.0、vuex、vue-router、axios、webpack、eslint、better-scroll
       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
       j.async = true;
       e.parentNode.insertBefore(j, e);
-      // delete footer
-      var i = setInterval(function () {
-        if (document.querySelector('#lv-container iframe') && document.querySelector('#lv-container iframe').contentDocument.querySelector('#footer')) {
-          document.querySelector('#lv-container iframe').contentDocument.querySelector('#footer').remove()
-          clearInterval(i)
-        }
-      }, 10)
     })(document, 'script');
   </script>
 

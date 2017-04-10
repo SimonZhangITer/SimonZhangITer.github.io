@@ -329,7 +329,7 @@
 <p>很明显，上例的问题在于多了一层闭包，因此增加了系统消耗。不过这并非不可避免。我们要看清楚这个问题，其本质是一要一个地方来保存for…in列举中的每一个值e,而并非是“需要一个闭包来添加一个层”。那么，既然列举过程中产生了不同的函数实例，自然也可以将值e交给这些函数实例自己去保存：</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> obj = <span class="keyword">new</span> <span class="built_in">Object</span>();</div><div class="line"><span class="keyword">var</span> events = &#123;</div><div class="line">    <span class="attr">m1</span>: <span class="string">'clicked'</span>,</div><div class="line">    <span class="attr">m2</span>: <span class="string">'changed'</span></div><div class="line">&#125;</div><div class="line"><span class="keyword">for</span> (e <span class="keyword">in</span> events) &#123;</div><div class="line">    (obj[e] = <span class="function"><span class="keyword">function</span>(<span class="params">aValue</span>) </span>&#123;</div><div class="line">        <span class="comment">//arguments.callee指向匿名函数自身</span></div><div class="line">        <span class="built_in">console</span>.log(events[<span class="built_in">arguments</span>.callee.aValue]);</div><div class="line">    &#125;).aValue = e;</div><div class="line">&#125;</div><div class="line"><span class="comment">//下面将输出不同的值</span></div><div class="line">obj.m1();</div><div class="line">obj.m2();</div></pre></td></tr></table></figure>
 
-        所有文章非特别说明皆为原创。技术更迭迅猛，部分内容可能会作修改，为保证信息与源同步，转载时请务必注明文章出处！谢谢合作 :-)
+        所有文章非特别说明皆为原创。部分内容可能会作修改，为保证信息与源同步，转载时请务必注明文章出处！谢谢合作 :-)
       
     </div>
 
@@ -344,7 +344,7 @@
       
         
   <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
-    <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
+    <div>if you think this article helpful, you can buy me a cup of coffee</div>
     <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
       <span>赏</span>
     </button>
@@ -486,7 +486,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">4</span>
+              <span class="site-state-item-count">5</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>
@@ -619,6 +619,14 @@
     NextZ
   </a>
 </div>
+<script>
+(function(){
+    var bp = document.createElement('script');
+    bp.src = '//push.zhanzhang.baidu.com/push.js';
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
 
         
 
@@ -751,13 +759,6 @@
       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
       j.async = true;
       e.parentNode.insertBefore(j, e);
-      // delete footer
-      var i = setInterval(function () {
-        if (document.querySelector('#lv-container iframe') && document.querySelector('#lv-container iframe').contentDocument.querySelector('#footer')) {
-          document.querySelector('#lv-container iframe').contentDocument.querySelector('#footer').remove()
-          clearInterval(i)
-        }
-      }, 10)
     })(document, 'script');
   </script>
 
