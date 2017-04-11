@@ -65,7 +65,7 @@
 1234//在构造器中修饰对象实例function MyObject()&amp;#123;">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JavaScript对象的的创建及属性状态维护分析">
-<meta property="og:url" content="https://simonzhangiter.github.io/2016/09/07/JavaScript对象的的创建及属性状态维护分析/index.html">
+<meta property="og:url" content="https://simonzhangiter.github.io/2016/09/07/JS-obj-creation-maintenance-analysis/index.html">
 <meta property="og:site_name" content="Simon's Blog">
 <meta property="og:description" content="在说属性之前，我们先来了解一下ES5的新方法,Object.create()函数。
 新的对象创建方法在旧的“原型继承”观念中，它的本质上是“复制原型”，即：以原型为模板复制一个新的对象。然而我们应该注意到一点事实：在这个思路上，“构造器函数”本身是无意义的。更确切的说，构造器函数对实例的修饰作用可有可无，例如：
@@ -85,7 +85,7 @@
     scheme: 'Pisces',
     sidebar: {"position":"right","display":"post"},
     fancybox: true,
-    motion: true,
+    motion: fale,
     duoshuo: {
       userId: undefined,
       author: 'Author'
@@ -96,7 +96,7 @@
 
 
 
-  <link rel="canonical" href="https://simonzhangiter.github.io/2016/09/07/JavaScript对象的的创建及属性状态维护分析/"/>
+  <link rel="canonical" href="https://simonzhangiter.github.io/2016/09/07/JS-obj-creation-maintenance-analysis/"/>
 
   <title> JavaScript对象的的创建及属性状态维护分析 | Simon's Blog </title>
 </head>
@@ -306,6 +306,15 @@
 
           
           
+             <span id="/2016/09/07/JS-obj-creation-maintenance-analysis/" class="leancloud_visitors" data-flag-title="JavaScript对象的的创建及属性状态维护分析">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">visitors </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
 
           
         </div>
@@ -467,7 +476,7 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/09/12/ES6语句或语句块中的闭包问题详解/" rel="prev" title="ES6语句或语句块中的闭包问题详解">
+              <a href="/2016/09/12/es6-statement/" rel="prev" title="ES6语句或语句块中的闭包问题详解">
                 ES6语句或语句块中的闭包问题详解 <i class="fa fa-chevron-right"></i>
               </a>
             
@@ -848,6 +857,113 @@
   
 
   
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("sFL6ozIsP1ifXmne7AFsKPBv-gzGzoHsz", "Iv7ckvubgKj3alA1AegMERgo");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
 
   
 
