@@ -1518,7 +1518,7 @@ pre .javascript .function {
   width: 960px;
   margin: 80px auto 0;
   color: #fff;
-  opacity: 0;
+  opacity: 1;
 }
 @media (max-width: 767px) {
   .page-post-detail .post-header {
@@ -1833,7 +1833,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #5e9485;
+  background: #908b22;
 }
 .links-of-blogroll {
   font-size: 13px;
