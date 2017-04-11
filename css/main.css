@@ -1833,7 +1833,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #908b22;
+  background: #8ad9ff;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2322,12 +2322,6 @@ a.search-result {
   left: 44%;
   top: 42%;
   color: #ccc;
-}
-.busuanzi-count:before {
-  content: " ";
-  float: left;
-  width: 260px;
-  min-height: 25px;
 }
 @media (min-width: 768px) and (max-width: 991px) {
   .busuanzi-count {
