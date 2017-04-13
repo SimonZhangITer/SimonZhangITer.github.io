@@ -12,14 +12,46 @@
         <title>JavaScript对象的的创建及属性状态维护分析</title>
         <pubTime>2016-09-07T02:07:43.000Z</pubTime>
         
-        <tag>JavaScript</tag>
-         
         <tag>ES6</tag>
+         
+        <tag>JavaScript</tag>
          
          
            
              
               <breadCrumb title="JavaScript" url="https://simonzhangiter.github.io/categories/JavaScript/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://simonzhangiter.github.io/2017/02/14/echartsDashboard/</loc>
+    <lastmod>2017-04-08T08:57:14.000Z</lastmod>
+    <data>
+        <display>
+        <title>Vue2+Echarts实现多种图表数据可视化</title>
+        <pubTime>2017-02-14T07:20:56.000Z</pubTime>
+        
+        <tag>vue</tag>
+         
+        <tag>vue-router</tag>
+         
+        <tag>vuex</tag>
+         
+        <tag>echarts</tag>
+         
+        <tag>ES6</tag>
+         
+        <tag>axios</tag>
+         
+        <tag>webpack</tag>
+         
+         
+           
+             
+              <breadCrumb title="Vue" url="https://simonzhangiter.github.io/categories/Vue/"/>
           
         </display>
     </data>
@@ -34,13 +66,13 @@
         <title>vue2构建高仿饿了么平台以及遇到的坑</title>
         <pubTime>2017-03-24T06:21:05.000Z</pubTime>
         
-        <tag>ES6</tag>
-         
         <tag>vue</tag>
          
         <tag>vue-router</tag>
          
         <tag>vuex</tag>
+         
+        <tag>ES6</tag>
          
         <tag>axios</tag>
          
@@ -57,38 +89,6 @@
 
     
   <url>
-    <loc>https://simonzhangiter.github.io/2017/02/14/echartsDashboard/</loc>
-    <lastmod>2017-04-08T08:57:14.000Z</lastmod>
-    <data>
-        <display>
-        <title>Vue2+Echarts实现多种图表数据可视化</title>
-        <pubTime>2017-02-14T07:20:56.000Z</pubTime>
-        
-        <tag>ES6</tag>
-         
-        <tag>vue</tag>
-         
-        <tag>vue-router</tag>
-         
-        <tag>vuex</tag>
-         
-        <tag>axios</tag>
-         
-        <tag>webpack</tag>
-         
-        <tag>echarts</tag>
-         
-         
-           
-             
-              <breadCrumb title="Vue" url="https://simonzhangiter.github.io/categories/Vue/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>https://simonzhangiter.github.io/2016/09/12/es6-statement/</loc>
     <lastmod>2017-04-08T08:56:03.000Z</lastmod>
     <data>
@@ -96,9 +96,9 @@
         <title>ES6语句或语句块中的闭包问题详解</title>
         <pubTime>2016-09-12T09:17:28.000Z</pubTime>
         
-        <tag>JavaScript</tag>
-         
         <tag>ES6</tag>
+         
+        <tag>JavaScript</tag>
          
          
            
