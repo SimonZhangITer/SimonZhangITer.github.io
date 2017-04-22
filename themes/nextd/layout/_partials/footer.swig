@@ -14,7 +14,15 @@
 
 <div class="theme-info">
   {{ __('footer.theme') }} -
-  <a class="theme-link" href="https://github.com/HiDino9/hexo-theme-nextd">
-    NexTD
+  <a class="theme-link" href="https://github.com/SimonZhangITer/hexo-theme-NextZ">
+    NextZ
   </a>
 </div>
+<script>
+(function(){
+    var bp = document.createElement('script');
+    bp.src = '//push.zhanzhang.baidu.com/push.js';
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>

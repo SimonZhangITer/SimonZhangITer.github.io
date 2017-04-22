@@ -5,14 +5,14 @@
 # Site
 title: Simon's Blog
 subtitle: My Own Best Enemy
-description: 
+description:
 author: Simon Zhang
 language: en
 timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: https://simonzhangiter.github.io/
+url: http://zhangr.top
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -28,6 +28,12 @@ i18n_dir: :lang
 skip_render:
   - 'README.md'
   - 'LICENSE'
+
+# sitemap
+sitemap:
+  path: sitemap.xml
+baidusitemap:
+  path: baidusitemap.xml
 
 # Writing
 new_post_name: :title.md # File name of new posts
@@ -67,6 +73,17 @@ pagination_dir: page
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
 theme: nextd
+
+# Extensions
+## Plugins: http://hexo.io/plugins/
+#RSS订阅
+plugin:
+- hexo-generator-feed
+# Feed Atom
+feed:
+  type: atom
+  path: atom.xml
+  limit: 20
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
